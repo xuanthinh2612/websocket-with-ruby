@@ -1,0 +1,15 @@
+<div class="ui large inverted menu">
+  <div class="ui container">
+    <%= link_to "Chatroom", root_path, class: "item" %>
+    <%= link_to "Message", root_path, class: "item" %>
+
+    <div class="right menu">
+      <% if logged_in? %>
+        <div class="item">
+          <!--          <div class="ui primary button">Sign out</div>-->
+          <%= button_to "Sign out", session_path(session), method: :delete, class: "ui primary button" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
